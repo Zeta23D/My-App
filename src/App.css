@@ -1,38 +1,80 @@
+/* Tối ưu cho iPhone 15 Pro Max */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Nền gradient lãng mạn */
+  font-family: 'Arial', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* Texture nhẹ */
+  opacity: 0.2;
+  z-index: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.title {
+  position: absolute;
+  top: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 24px;
+  z-index: 1;
+}
+
+.boy {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.boy-body {
+  font-size: 60px; /* Thay bằng SVG hoặc hình ảnh thực tế */
+}
+
+.message {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #d6336c;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.heart {
+  position: absolute;
+  font-size: 20px;
+  z-index: 1;
+}
+
+/* Responsive cho iPhone 15 Pro Max */
+@media (max-width: 430px) {
+  .title {
+    font-size: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .boy {
+    width: 80px;
+    height: 120px;
+  }
+  .boy-body {
+    font-size: 50px;
+  }
+  .message {
+    font-size: 12px;
+    padding: 3px 8px;
   }
 }
